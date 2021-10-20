@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/amount.css">
+    
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="nav-logo">
+                <a href="index.html"><span>The Sparks Foundation</span></a>
+            </div>
+            <ul class="nav-list">
+                <li class="list-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="list-item"><a href="amount.html" class="nav-link">Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+   <div class="container">
+       <div class="donate-pg-overlay">
+            <img src="./assets/images/bg-2.jpg" alt="app" style="width:100%;height:100%;background:#333">
+        </div>
+       <div class="donation-box">
+            <div class="donation-details">
+                <p>“We make a living by what we get, but we make a life by what we give.” Winston Churchill</p>
+            </div>
+            <div class="donation-form">
+                <form>
+                    <div class="input-box">
+                        <input type="text" id="name" class="input-row" name="name" placeholder="Enter Your Name">
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="amount" class="input-row" name="amount" placeholder="Enter Donating Amount">
+                    </div>
+                    <div class="input-box btn-box">
+                        <input type="button" id="donate-btn" name="button" class="sub-btn" value="Donate Us" onclick="MakePayment()">
+                        <!-- <button type="submit" class="sub-btn" value="Pay Now" onclick="MakePayment()">Donate</button> -->
+                    </div>
+                </form>
+            </div>
+       </div>
+   </div>
+    <script>
+        // let donateBtn = document.querySelector(".sub-btn");
+        // donateBtn.addEventListner("click",MakePayment)
+        // let donateBtn = document.querySelector(".sub-btn");
+        // donateBtn.addEventListener("click",()=>{
+
+        // })
+        let userName = document.querySelector("#name").value;
+        let userAmount = document.querySelector("#amount").value;
+        function MakePayment(){
+            let userName = document.querySelector("#name").value;
+            let userAmount = document.querySelector("#amount").value;
+            // if(userName !=="" && userAmount !==""){
+                console.log(userName)
+                console.log(userAmount)
+                var options = {
+            "key": "rzp_test_IgZLQQBRAjqrlI", // Enter the Key ID generated from the Dashboard
+            "amount":userAmount*100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+            "currency": "INR",
+            "name": userName,
+            "description": "The Sparks Foundation",
+            "image": "https://i.ibb.co/nCXVp2D/sparkslogo.png",
+            // "order_id": "order_Ef80WJDPBmAeNt", //Pass the `id` obtained in the previous step
+            // "account_id": "acc_Ef7ArAsdU5t0XL",
+            "handler": function (response){
+                // alert(response.razorpay_payment_id);
+                // alert(response.razorpay_order_id);
+                // alert(response.razorpay_signature)
+                jQuery.ajax({
+                    // type:"POST",
+                    // url:"payment.php",
+                    // data:"pay_id="+response.razorpay_payment_id+"&amount="+amount+"&name="+name,
+                    success:function(result){
+                        window.location.href="success.html"
+                    },
+                    failure:function(result){
+                        window.location.href="index.html"
+                    }
+                    
+                })
+            }
+        };
+        var rzp1 = new Razorpay(options);
+        document.getElementById('donate-btn').onclick = function(){
+            rzp1.open();
+            // e.preventDefault();
+        }
+                // var options = {
+                //     "key": "rzp_test_IgZLQQBRAjqrlI", // Enter the Key ID generated from the Dashboard
+                //     "amount": userAmount*100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+                //     "currency": "INR",
+                //     "name": userName,
+                //     "description": "Test Transaction",
+                //     "image": "https://i.ibb.co/nCXVp2D/sparkslogo.png",
+                //     "handler": function (response){
+                //         alert(response.razorpay_payment_id);
+                //         alert(response.razorpay_order_id);
+                //         alert(response.razorpay_signature)
+                //     }
+                // };
+                // var rzp1 = new Razorpay(options);
+                //     rzp1.open();
+                // }
+            // }
+        // }
+        // else{
+        //     console.log("error")
+        // }
+    }
+    </script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+</html>
