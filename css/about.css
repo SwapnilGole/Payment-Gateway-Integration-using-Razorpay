@@ -1,0 +1,57 @@
+/* about */
+.about{
+    position:relative;
+    /* margin-top:10rem; */
+}
+.about .container{
+    padding:2rem 0;;
+    display:flex;
+    width:90%;
+    margin:0 auto;
+}
+
+.about .container .left,
+.about .container .right{
+    width:50%;
+    position: relative;
+}
+.about .container .left{
+    margin-right:0.5rem;
+}
+.about .container .right{
+    margin-left:0.5rem;
+}
+.about .about-info p{
+    color:#666;
+    font-size:1rem;
+    margin:0.5rem 0;
+}
+.about .about-info i{
+    color:rgb(62, 167, 209);
+    font-size:1.15rem;
+    padding-right:0.25rem;
+}
+.about .about-info h2{
+    color:#333;
+    font-size:2rem;
+    margin:0.5rem 0;
+}
+.about .features-content{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.about .right video{
+    width:100%;
+    height:450px;
+}
+.about .right .play-btn img{
+    position:absolute;
+    width:50px;
+    height:50px;
+    top:50%;
+    right:50%;
+    transform: translate(40%,-50%);
+}
+.about .right .pause-img{
+    display:none;
+}

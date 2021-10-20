@@ -5,32 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- External CSS -->
     <link rel="stylesheet" href="css/style.css">
-    
+    <!--fontawesome-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/sparkslogo.png" type="image/x-icon">
 </head>
 <body>
-
-    <!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Gateway Integration - Project</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body> -->
+    <!-- header section starts -->
     <header>
         <nav class="nav">
             <div class="nav-logo">
+                <img src="assets/images/sparkslogo.png" alt="logo">
                 <a href="index.html"><span>The Sparks Foundation</span></a>
             </div>
             <ul class="nav-list">
                 <li class="list-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="list-item"><a href="amount.html" class="nav-link">Donate</a></li>
+                <li class="list-item"><a href="about.html" class="nav-link">About us</a></li>
             </ul>
         </nav>
     </header>
+    <!-- header sections ends -->
+    <!-- donate container section starts -->
     <div class="donate-container">
         
         <div class="donate-overlay">
@@ -44,31 +42,114 @@
             </div>
         </div>
     </div>
+    <!-- donate container section ends -->
+
+    <!-- top cursor start-->
+    <div class="container scroll-top d-block">
+      <i class="fas fa-chevron-up " onclick="topFunction()" id="top-btn"></i>
+    </div>
+    <!-- top cursor end  -->
+
+    <!-- footer section starts -->
+    <section class="footer" id="footer">
+        <div class="footer-container">
+            <div class="items">
+                <div class="box">
+                    <div class="logo">
+                        <img src="assets/images/sparkslogo.png" alt="teeth">
+                        <a href="#home"><p>The Sparks Foundation</p><span>For a smile of every family</span></a>
+                    </div>
+                    <div class="about-us">
+                        <p>We care about people's health and help them through organized.</p>
+                    </div>
+                    <div class="contact">
+                        <div class="address contact-details">
+                            <i class="fas fa-map-marker-alt"></i><span>PO BOX 33195 NW 56TH ST Miami, Florida</span>
+                        </div>
+                        <div class="call contact-details">
+                            <i class="fas fa-phone"></i><span>Call US: +1 800 722 8987</span>
+                        </div>
+                        <div class="email contact-details">
+                            <i class="fas fa-envelope"></i><span>info@thesparksfoundation.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="title">
+                        <h4>RECENT POSTS</h4>
+                    </div>
+                    <div class="posts">
+                        <div class="post-box">
+                            <img src="assets/images/blog-img-1.jpg" alt="post-img1post-img2">
+                            <div class="post-info">
+                                <h5>WHAT CAUSES PERIOCORONITIS</h5>
+                                <p>24 July 2019</p>
+                            </div>
+                        </div>
+                        
+                        <div class="post-box">
+                            <img src="assets/images/blog-img-2.jpg" alt="">
+                            <div class="post-info">
+                                <h5>GINGIVITIS CAUSES AND TREATMENT</h5>
+                                <p>22 July 2019</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="title">
+                        <h4>TAGS</h4>
+                    </div>
+                    <div class="list">
+                        <p><i class="fas fa-angle-double-right"></i>About Us</p>
+                        <p><i class="fas fa-angle-double-right"></i>Blogs & News</p>
+                        <p><i class="fas fa-angle-double-right"></i>Contact Us</p>
+                        <p><i class="fas fa-angle-double-right"></i>Our Services</p>
+                        <p><i class="fas fa-angle-double-right"></i>Gallery</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="title">
+                        <h4>INSTAGRAM POSTS</h4>
+                    </div>
+                    <div class="gallery">
+                        <div class="img-box">
+                            <img src="assets/images/post-img-1.jpg" alt="gallery-img1">
+                        </div>
+                        <div class="img-box">
+                            <img src="assets/images/post-img-2.jpg" alt="gallery-img2">
+                        </div>
+                        <div class="img-box">
+                            <img src="assets/images/post-img-3.jpg" alt="gallery-img3">
+                        </div>
+                        <div class="img-box">
+                            <img src="assets/images/post-img-4.jpg" alt="gallery-img4">
+                        </div>
+                        <div class="img-box">
+                            <img src="assets/images/post-img-5.jpg" alt="gallery-img5">
+                        </div>
+                        <div class="img-box">
+                            <img src="assets/images/post-img-6.jpg" alt="gallery-img6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="cr-info">
+                    <span>&copy; 2021 The Sparks Foundation</span><p> - Donation for Medical Fundraising</p> 
+                </div>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer section ends -->
 </body>
 </html>
-
-    <!-- <button id="rzp-button1">Pay</button>
-<script>
-var options = {
-    "key": "rzp_test_SJcnSIIWlzm6Mb", // Enter the Key ID generated from the Dashboard
-    "amount": "500", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-    "currency": "INR",
-    "name": "Acme Corp",
-    "description": "Test Transaction",
-    "image": "https://example.com/your_logo",
-    // "order_id": "order_Ef80WJDPBmAeNt", //Pass the `id` obtained in the previous step
-    // "account_id": "acc_Ef7ArAsdU5t0XL",
-    "handler": function (response){
-        alert(response.razorpay_payment_id);
-        alert(response.razorpay_order_id);
-        alert(response.razorpay_signature)
-    }
-};
-var rzp1 = new Razorpay(options);
-document.getElementById('rzp-button1').onclick = function(e){
-    rzp1.open();
-    e.preventDefault();
-} -->
-</script>
+<script src="js/topbtn.js"></script>
 </body>
 </html>
