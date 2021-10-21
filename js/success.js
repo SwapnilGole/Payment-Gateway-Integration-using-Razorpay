@@ -12,6 +12,8 @@ paidAmount.innerHTML = sessionStorage.getItem("payAmount");
 donorAmt.innerHTML = sessionStorage.getItem("payAmount");
 paymentId.innerHTML = sessionStorage.getItem("payId");
 donorName.innerHTML = sessionStorage.getItem("payName");
+
+// print btn
 printBtn.addEventListener("click",()=>{
             window.print();
 })
