@@ -4,7 +4,8 @@
         let userName = document.querySelector("#name").value;
         let userAmount = document.querySelector("#amount").value;
         let errorBox = document.querySelector(".error-box");
-
+        
+        
         function MakePayment(){
             let userName = document.querySelector("#name").value;
             let userAmount = document.querySelector("#amount").value;
@@ -20,6 +21,25 @@
                   description: "The Sparks Foundation",
                   image: "https://i.ibb.co/nCXVp2D/sparkslogo.png",
                   handler: function (response) {
+                    let paymentId = response.razorpay_payment_id;
+                    let paymentAmount = userAmount;
+                    let payerName = userName;
+                    sessionStorage.setItem("payId",paymentId);
+                    sessionStorage.setItem("payAmount",paymentAmount);
+                    sessionStorage.setItem("payName",payerName);
+                    // let paidAmount = document.querySelector(".user-amount");
+                    // let paymentId = document.querySelector(".payment-id");
+                    // let donorName = document.querySelector(".donor-name");
+                    console.log(response)
+                    // paymentId.textContent = response.razorpay_payment_id;
+                    // paidAmount.textContent = userAmount;
+                    // donorName.textContent = userName;
+                    // console.log(paidAmount);
+                    // console.log(paymentId);
+                    // console.log(donorName);
+                    // console.log(response.razorpay_payment_id);
+                    //  console.log(response.razorpay_order_id);
+                    //  console.log(response.razorpay_signature);
                     jQuery.ajax({
                       success: function (result) {
                         window.location.href = "success.html";

@@ -4,6 +4,13 @@ body{
     justify-content: center;
     background-color: aliceblue;
 }
+.payment-success-container,
+.nav-btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 .payment-success{
     display: flex;
     align-items: center;
@@ -14,21 +21,55 @@ body{
     height:400px;
     border-radius: 0.5rem;
     border:3px solid rgba(7, 184, 1, 0.5);
+    margin:1rem 0;
 }
 .payment-success img{
-    width:100px;
-    height:100px;
+    width:60px;
+    height:60px;
     margin:1rem 0;
 }
 .payment-success h2{
     color:#333;
     font-size:2rem;
-}
-.payment-success p{
-    font-size:1.25rem;
     margin:1rem 0;
 }
-.payment-success .home-btn{
+.amt-msg{
+    font-size:2rem;
+    color:rgb(63, 163, 93);
+    font-weight: 600;;
+}
+.payment-success .payid-msg,
+.payment-success .mail-msg{
+    font-size:0.9rem;
+    margin:0.15rem 0;
+}
+.thanks-msg{
+    font-size:1.15rem;
+    font-weight:400;
+    margin:1rem 0;
+}
+.donor-name,
+.paid-amt{
+    font-weight:500;
+    color:rgb(46, 206, 40);
+}
+.print-btn{
+    border:none;
+    outline: none;
+    padding:0.5rem;
+    border-radius: 0.25rem;
+    background-color: rgb(78, 236, 73);
+    color:#fff;
+    font-weight: 400;
+    font-size: 1rem;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.print-btn:hover{
+    color:#fff;
+    background-color: rgb(46, 206, 40);
+}
+.payment-success-container .home-btn{
     font-size:1rem;
     background-color: rgb(241, 220, 192);
     padding:0.5rem;
@@ -36,8 +77,9 @@ body{
     cursor: pointer;
     color:rgba(228, 11, 11, 0.5);
     transition: all 0.3s linear;
+    margin:1rem 0;
 }
-.payment-success .home-btn:hover{
+.payment-success-container .home-btn:hover{
     color:rgb(241, 220, 192);
     background-color:rgba(228, 11, 11, 0.5) ;
 }

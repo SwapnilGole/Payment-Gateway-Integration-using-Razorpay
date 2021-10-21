@@ -90,13 +90,12 @@ animation: navanim 0.5s infinite;
 }
 .donate-container{
     position: relative;
-    /* background: url("/images/bg-1.jpg") no-repeat center center/cover; */
     width:100%;
     min-height: calc(100vh - 4rem);
-    /* filter:brightness(50%); */
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 .donate-overlay{
     position: absolute;
@@ -151,6 +150,27 @@ animation: navanim 0.5s infinite;
 .donate-pg-btn:hover{
     background-color: rgb(230, 188, 4);
     color:a;
+}
+.donation-payment-page{
+    padding:1rem;
+    background-color: rgb(230, 188, 4);
+    margin:1rem 0;
+    text-align: center;
+    border-radius: 0.5rem;
+}
+.donation-payment-page p{
+    font-size:1.25rem;
+    font-weight: 600;
+    color:#fff;
+}
+.donation-payment-page a{
+    color:rgb(56, 59, 212);
+    font-weight:500;
+    text-decoration: underline;
+    transition: all 0.3s linear;
+}
+.donation-payment-page a:hover{
+    color:rgb(20, 22, 163);
 }
 /* footer */
 .footer{
@@ -338,9 +358,9 @@ animation: navanim 0.5s infinite;
     cursor:pointer;
     background-color:rgba(255, 211, 16,0.8);
     font-size: 1.25rem;
-    width:50px;
-    height:50px;
-    line-height: 50px;
+    width:40px;
+    height:40px;
+    line-height: 40px;
     text-align:center;
     border-radius:50%;
 }

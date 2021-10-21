@@ -20,6 +20,9 @@
 }
 .about .container .right{
     margin-left:0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .about .about-info p{
     color:#666;

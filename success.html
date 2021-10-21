@@ -9,15 +9,27 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/success.css">
     <!-- favicon -->
-    <link rel="shortcut icon" href="assets/images/check.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/success.png" type="image/x-icon">
 </head>
 <body>
-    <div class="payment-success">
-        <img src="assets/images/check.png" alt="success-img">
-        <h2>Payment Successfully done</h2>
-        <p>Thanks for your valuable Donation</p>
-        <a href="index.html" class="home-btn">Go to Home Page</a>
+    <div class="payment-success-container">
+        <div class="payment-success">
+            <img src="assets/images/success.png" alt="success-img">
+            <p class="amt-msg">₹ <span class="user-amount">20</span>.00 </p>
+            <h2>Payment Successfull !!</h2>
+            <p class="payid-msg">Payment id: <span class="payment-id">12345</span></p>
+            <p class="mail-msg">A confirmation email has been sent to you.</p>
+            <p class="thanks-msg">Thank you <span class="donor-name">Swap</span> for your valuable Donation of <span class="paid-amt">₹ <span class="donor-amt">20</span>.00</span> </p>
+        </div>
+        <div class="nav-btns">
+            <button class="print-btn">Print Invoice</button>
+            <a href="index.html" class="home-btn">Go to Home Page</a>
+        </div>
     </div>
 
+    <script src="js/success.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <!-- <script src="js/app.js"></script> -->
 </body>
 </html>
