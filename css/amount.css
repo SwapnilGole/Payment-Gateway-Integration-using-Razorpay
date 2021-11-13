@@ -12,7 +12,7 @@ a{
 }
 .container{
     width: 100%;
-    min-height: calc(100vh - 4rem);
+    min-height:100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,3 +118,35 @@ a{
     .error-box.show{
         display: block;
     }
+
+    /* media queries */
+@media screen and (max-width:768px) {
+    .container .donation-box{
+    width:500px;
+    height:400px;
+    }
+}
+@media screen and (max-width:568px) {
+    .container .donation-box{
+    width:400px;
+    height:300px;
+    }
+    .donation-form .input-row{
+        width:80%;
+    }
+    .donation-details p{
+    font-size:1.05rem;
+    }
+}
+@media screen and (max-width:425px) {
+    .container .donation-box{
+    width:300px;
+    height:300px;
+    }
+    .donation-form .input-row{
+        width:100%;
+    }
+    .donation-details p{
+    font-size:1rem;
+    }
+}

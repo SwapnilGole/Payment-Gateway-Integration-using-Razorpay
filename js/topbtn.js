@@ -31,8 +31,20 @@ function topFunction() {
         $(".play-btn .pause-img").fadeOut();
         $(".play-btn .play-img").fadeIn();
         $("#dentist-video")[0].pause();
-        if ("#dentist-video"[0].end()) {
-          $(".play-btn .pause-img").fadeIn();
-          $(".play-btn .play-img").fadeOut();
-        }
+        // if ("#dentist-video"[0].end()) {
+        //   $(".play-btn .play-img").fadeOut();
+        //   $(".play-btn .pause-img").fadeIn();
+        // }
+      //  if(("#dentist-video")[0].onended){
+      //       $(".play-btn .pause-img").fadeIn();
+      //       $(".play-btn .play-img").fadeOut();
+      //   }
     })
+
+    if(document.getElementById('dentist-video').addEventListener('ended',myHandler,false)){
+
+    function myHandler() {
+      $(".play-btn .pause-img").fadeIn();
+      $(".play-btn .play-img").fadeOut();
+    }
+  }

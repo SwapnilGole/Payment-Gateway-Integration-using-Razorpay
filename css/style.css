@@ -16,7 +16,7 @@ body{
 a{
     text-decoration: none;;
 }
-header{
+/* header{
     height: 4rem;
     display: flex;
     align-items: center;
@@ -81,11 +81,87 @@ animation: navanim 0.5s infinite;
     100%{
         width:100%;
     }
+} */
+/* navbar */
+.navbar{
+    position:fixed;
+    width:100%;
+    font-family: 'Ubuntu', sans-serif;
+    height:4rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    transition:all 0.3s ease;
+    z-index:2;
+    background-color: rgba(255, 211, 16,06);
+}
+.navbar.sticky{
+    background:rgba(219, 205, 3, 0.9);
+    height:3rem;
+} 
+.navbar.sticky .nav-list li a{
+    color:var(--orange-color);
+}
+.navbar .logo a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:1.25rem;
+    color:#fff;
+    font-weight:600;
+    color:var(--orange-color);
+}
+.navbar .logo span{
+    color:#fff;
+    text-align: center;
+}
+.navbar .logo a:hover{
+    border-bottom:1px dotted #fff;
+}
+.navbar .logo img{
+    width:60px;
+    height:60px;
+}
+.navbar .nav-list li{
+    list-style-type:none;
+    display:inline-block;
+    margin:0 1rem;
+}
+.navbar .nav-list li a{
+    font-size:1.15rem;
+    color:#fff;
+    font-weight:400;
+    position:relative;
+}
+.navbar .nav-list li a:before{
+    content:'';
+    position:absolute;
+    height:2px;
+    bottom:-2px;
+    background:#fff;
+}
+.navbar .nav-list li a:hover:before{
+    animation:link 0.3s ease-in-out;
+    width:100%;
+}
+@keyframes link{
+    0%{
+        width:0;
+    }
+    100%{
+        width:100%;
+    }
+}
+.navbar .menu-btn{
+    color:#fff;
+    font-size:1.5rem;
+    cursor:pointer;
+    display:none;
 }
 .donate-container{
     position: relative;
     width:100%;
-    min-height: calc(100vh - 4rem);
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,7 +183,7 @@ animation: navanim 0.5s infinite;
     width:850px;
     height:500px;
     background-color: rgba(0, 0, 0, 0.3);
-    margin:0 auto;
+    margin:4rem auto 0;
     color:#fff;
     display:flex;
     align-items: center;
@@ -141,7 +217,7 @@ animation: navanim 0.5s infinite;
 }
 .donate-pg-btn:hover{
     background-color: rgb(230, 188, 4);
-    color:a;
+    color:#fff;
 }
 .donation-payment-page{
     padding:1rem;
@@ -175,6 +251,7 @@ animation: navanim 0.5s infinite;
 .footer .items{
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    grid-gap:0.5rem;
     margin:0 auto;
     width:90%;
     padding:1rem 0;
@@ -341,8 +418,8 @@ animation: navanim 0.5s infinite;
 #top-btn{
     display:none;
     position:fixed;
-    bottom:50px;
-    right:30px;
+    bottom:100px;
+    right:10px;
     z-index:99;
     border:none;
     outline:none;
@@ -358,4 +435,154 @@ animation: navanim 0.5s infinite;
 }
 #top-btn:hover{
     background-color:rgba(255, 211, 16,0.5);
+}
+
+
+/* media queries */
+@media only screen and (max-width:1200px){
+    html{
+        font-size:85%;
+    }
+    .navbar .logo a{
+    font-size:2rem;
+    color:#fff;
+    font-weight:600;
+    color:var(--orange-color);
+    }
+    .footer .items{
+    grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media only screen and (max-width:1000px){
+    .navbar{
+        justify-content:space-between;
+        padding:0 2rem;
+    }
+    .navbar .nav-list{
+        position:absolute;
+        width:100%;
+        min-height:100vh;
+        left:-100%;
+        top:0;
+        background:#111;
+        text-align:center;
+        padding:4rem 0;
+        transition:all 0.3s ease;
+        z-index:5;
+    }
+    .navbar .nav-list.active{
+        left:0;
+    }
+    .navbar .menu-btn{
+    display:block;
+    z-index:99;
+    }
+    .navbar .menu-btn i.active::before{
+        content:'\f00d'
+    }
+    .navbar .nav-list li{
+        display:block;
+    }
+    .navbar .nav-list li a{
+        display:inline-block;
+        margin:1rem 0;
+        color:#fff !important;
+    }
+    .donate-content{
+    width:500px;
+    height:400px;
+    }
+    .footer .box .gallery img{
+    width:60px;
+    height:60px;
+    }
+}
+
+
+@media only screen and (max-width:768px){
+   .navbar .logo a{
+    font-size:1.15rem;
+    }
+    .navbar .logo img{
+    width:40px;
+    height:40px;
+    }
+    .donate-content{
+    width:500px;
+    height:300px;
+    }
+    .footer .items{
+    grid-template-columns: repeat(2,1fr);
+    }
+    .footer .box .gallery{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:0.25rem;
+    padding-top:1rem;
+    }
+    .footer .copyright{
+    padding:0.5rem 0rem;
+    flex-direction: column;
+    }
+    .footer .social-media{
+        margin:0.25rem 0;
+    }
+    .footer .social-media i{
+    font-size:1rem;
+    padding:0 0.25rem;
+    width:30px;
+    height:30px;
+    line-height:30px;
+    }
+    /* top btn */
+    #top-btn{
+    font-size: 1rem;
+    width:30px;
+    height:30px;
+    line-height: 30px;
+    }
+}
+@media only screen and (max-width:568px){
+    .donate-content{
+    width:400px;
+    height:300px;
+    }
+    .footer .items{
+    grid-template-columns: repeat(1,1fr);
+    }
+}
+@media only screen and (max-width:425px){
+    .donate-content{
+    width:300px;
+    height:250px;
+    }
+    .navbar .logo a{
+    font-size:1rem;
+    }
+    .navbar .logo img{
+    width:30px;
+    height:30px;
+    }
+    .donate-content h3{
+    font-size:1rem;
+    }
+    .donation-payment-page{
+    padding:0.5rem;
+    background-color: rgb(230, 188, 4);
+    margin:1rem 0;
+    text-align: center;
+    border-radius: 0.5rem;
+    }
+    .donation-payment-page p{
+        font-size:1rem;
+        font-weight: 600;
+        color:#fff;
+    }
+    .donation-payment-page a{
+        color:rgb(56, 59, 212);
+        font-weight:500;
+        text-decoration: underline;
+        transition: all 0.3s linear;
+    }
 }
