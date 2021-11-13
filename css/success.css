@@ -83,3 +83,106 @@ body{
     color:rgb(241, 220, 192);
     background-color:rgba(228, 11, 11, 0.5) ;
 }
+
+
+/* media queries */
+@media screen and (max-width:768px) {
+    .payment-success{
+    width:500px;
+    height:300px;
+    }
+}
+@media screen and (max-width:568px) {
+    .payment-success{
+    width:400px;
+    height:250px;
+    }
+    .payment-success img{
+    width:40px;
+    height:40px;
+    margin:0.5rem 0;
+    }
+    .payment-success h2{
+        color:#333;
+        font-size:2rem;
+        margin:0.5rem 0;
+    }
+    .amt-msg{
+        font-size:2rem;
+        color:rgb(63, 163, 93);
+        font-weight: 600;;
+    }
+    .payment-success .payid-msg,
+    .payment-success .mail-msg{
+        font-size:0.9rem;
+        margin:0.15rem 0;
+    }
+    .thanks-msg{
+        font-size:1.15rem;
+        font-weight:400;
+        margin:0.5rem 0;
+    }
+}
+
+@media screen and (max-width:568px) {
+    .payment-success{
+    width:400px;
+    height:250px;
+    }
+    .payment-success img{
+    width:40px;
+    height:40px;
+    margin:0.5rem 0;
+    }
+    .payment-success h2{
+        color:#333;
+        font-size:2rem;
+        margin:0.5rem 0;
+    }
+    .amt-msg{
+        font-size:2rem;
+        color:rgb(63, 163, 93);
+        font-weight: 600;;
+    }
+    .payment-success .payid-msg,
+    .payment-success .mail-msg{
+        font-size:0.9rem;
+        margin:0.15rem 0;
+    }
+    .thanks-msg{
+        font-size:1.15rem;
+        font-weight:400;
+        margin:0.5rem 0;
+    }
+}
+@media screen and (max-width:425px) {
+    .payment-success{
+    width:300px;
+    height:200px;
+    margin:1rem 0;
+    }
+    .payment-success img{
+    width:40px;
+    height:40px;
+    margin:0.5rem 0;
+    }
+    .payment-success h2{
+        color:#333;
+        font-size:1rem;
+        margin:0.5rem 0;
+    }
+    .amt-msg{
+        font-size:1.25rem;
+        color:rgb(63, 163, 93);
+        font-weight: 600;;
+    }
+    .payment-success .payid-msg,
+    .payment-success .mail-msg{
+        font-size:0.9rem;
+        margin:0.15rem 0;
+    }
+    .thanks-msg{
+        font-size:0.9rem;
+        font-weight:500;
+    }
+}
